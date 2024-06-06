@@ -1,11 +1,11 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { CreatePost } from "~/app/_components/create-post";
-import { api } from "~/trpc/server";
-import styles from "./index.module.css";
+import { CreatePost } from '~/app/_components/create-post';
+import styles from '~/app/index.module.css';
+import { api } from '~/trpc/server';
 
 export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
+  const hello = await api.post.hello({ text: 'from tRPC' });
 
   return (
     <main className={styles.main}>
@@ -39,7 +39,7 @@ export default async function Home() {
         </div>
         <div className={styles.showcaseContainer}>
           <p className={styles.showcaseText}>
-            {hello ? hello.greeting : "Loading tRPC query..."}
+            {hello ? hello.greeting : 'Loading tRPC query...'}
           </p>
         </div>
 
