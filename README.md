@@ -38,8 +38,10 @@ Run `pnpm db:push` to push the schema to the database during development.
 - [x] Add PostHog
 - [ ] Build the tracker
 - [ ] Build the leaderboard
+- [ ] Build the landing page
 - [ ] Add a user profile & settings
 - [ ] Add Skool username to user metadata
 - [ ] Cool graphs and stats
 - [ ] Add API access with Upstash
 - [ ] Share the project with the community
+- [ ] AP Admin dashboard to track user commitment
