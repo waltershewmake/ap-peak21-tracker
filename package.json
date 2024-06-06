@@ -23,6 +23,8 @@
     "release:major": "standard-version --release-as major"
   },
   "dependencies": {
+    "@mantine/core": "^7.10.1",
+    "@mantine/hooks": "^7.10.1",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tabler/icons-react": "^3.5.0",
     "@tanstack/react-query": "^5.39.0",
