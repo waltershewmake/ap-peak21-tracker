@@ -8,6 +8,7 @@ import { theme } from '~/styles/theme';
 import { TRPCReactProvider } from '~/trpc/react';
 
 import '@mantine/core/styles.css';
+import { CSPostHogProvider } from '~/app/_analytics/provider';
 
 export const metadata = {
   title: 'AP Peak 21 Tracker',
@@ -22,18 +23,20 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <head>
-          <ColorSchemeScript />
-        </head>
-        <body className={GeistSans.className}>
-          <TRPCReactProvider>
-            <MantineProvider theme={theme} forceColorScheme="light">
-              {children}
-            </MantineProvider>
-          </TRPCReactProvider>
-        </body>
-      </html>
+      <CSPostHogProvider>
+        <html lang="en">
+          <head>
+            <ColorSchemeScript />
+          </head>
+          <body className={GeistSans.className}>
+            <TRPCReactProvider>
+              <MantineProvider theme={theme} forceColorScheme="light">
+                {children}
+              </MantineProvider>
+            </TRPCReactProvider>
+          </body>
+        </html>
+      </CSPostHogProvider>
     </ClerkProvider>
   );
 }
