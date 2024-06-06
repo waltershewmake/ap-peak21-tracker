@@ -1,0 +1,22 @@
+name: 'Lint Project'
+description: 'Lint project using TypeScript & ESLint'
+inputs:
+  typescript:
+    description: 'Run TypeScript Lint (ts-lint)'
+    required: false
+    default: 'true'
+  eslint:
+    description: 'Run ESLint (lint)'
+    required: false
+    default: 'true'
+runs:
+  using: 'composite'
+  steps:
+    - name: TypeScript Lint
+      shell: bash
+      run: SKIP_ENV_VALIDATION=true pnpm ts-lint
+      if: ${{ inputs.typescript == 'true' }}
+    - name: ESLint
+      shell: bash
+      run: SKIP_ENV_VALIDATION=true pnpm lint
+      if: ${{ inputs.eslint == 'true' }}
