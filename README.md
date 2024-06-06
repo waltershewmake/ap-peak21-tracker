@@ -2,7 +2,7 @@
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+If you are not familiar with the different technologies used in this project, please refer to the respective docs.
 
 - [Next.js](https://nextjs.org)
 - [Clerk](https://clerk.com)
@@ -12,22 +12,13 @@ If you are not familiar with the different technologies used in this project, pl
 - [PostHog](https://posthog.com)
 - [Upstash](https://upstash.com)
 
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
 ## Setup
 
 1. Clone the repository
 2. Run `pnpm install`
-3. Clone `.env.example` to `.env` and update the password within the database URL
-4. Setup the db with `pnpm db:setup`
-5. Run `pnpm dev`
+3. Setup the db with `pnpm db:setup`
+4. Run `pnpm dev`
+5. Visit [http://localhost:3000](http://localhost:3000)
 
 Run `pnpm db:push` to push the schema to the database during development.
 
