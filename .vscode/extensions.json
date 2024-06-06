@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-rename-tag",
+    "dsznajder.es7-react-js-snippets",
+    "wix.vscode-import-cost",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "YoavBls.pretty-ts-errors",
+    "csstools.postcss"
+  ]
+}
