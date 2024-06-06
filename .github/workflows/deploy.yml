@@ -17,3 +17,5 @@ jobs:
         uses: ./.github/actions/install-dependencies
 
       - run: pnpm db:migrate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
