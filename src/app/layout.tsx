@@ -26,7 +26,9 @@ export default function RootLayout({
       </head>
       <body className={GeistSans.className}>
         <TRPCReactProvider>
-          <MantineProvider theme={theme}>{children}</MantineProvider>
+          <MantineProvider theme={theme} forceColorScheme="light">
+            {children}
+          </MantineProvider>
         </TRPCReactProvider>
       </body>
     </html>
