@@ -41,12 +41,13 @@ Run `pnpm db:push` to push the schema to the database during development.
 
 ## Todo
 
-- [ ] Add Clerk
+- [x] Add Clerk
 - [ ] Add Sentry
 - [ ] Add PostHog
 - [ ] Build the tracker
 - [ ] Build the leaderboard
 - [ ] Add a user profile & settings
+- [ ] Add Skool username to user metadata
 - [ ] Cool graphs and stats
 - [ ] Add API access with Upstash
 - [ ] Share the project with the community
