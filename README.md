@@ -38,3 +38,15 @@ Run `pnpm db:push` to push the schema to the database during development.
 4. Commit frequently, using conventional commits
 5. Push your branch
 6. Create a pull request
+
+## Todo
+
+- [ ] Add Clerk
+- [ ] Add Sentry
+- [ ] Add PostHog
+- [ ] Build the tracker
+- [ ] Build the leaderboard
+- [ ] Add a user profile & settings
+- [ ] Cool graphs and stats
+- [ ] Add API access with Upstash
+- [ ] Share the project with the community
