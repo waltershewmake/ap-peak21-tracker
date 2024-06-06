@@ -43,7 +43,7 @@ Run `pnpm db:push` to push the schema to the database during development.
 ## Todo
 
 - [x] Add Clerk
-- [ ] Add Sentry
+- [x] Add Sentry
 - [ ] Add PostHog
 - [ ] Build the tracker
 - [ ] Build the leaderboard
