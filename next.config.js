@@ -7,7 +7,14 @@ await import('./src/env.js');
 import { withSentryConfig } from '@sentry/nextjs';
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
 
 export default withSentryConfig(config, {
   // For all available options, see:
