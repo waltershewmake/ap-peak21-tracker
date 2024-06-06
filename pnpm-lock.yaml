@@ -23,9 +23,6 @@ dependencies:
   '@trpc/server':
     specifier: next
     version: 11.0.0-rc.390
-  ap-peak21-tracker:
-    specifier: 'link:'
-    version: 'link:'
   drizzle-orm:
     specifier: ^0.30.10
     version: 0.30.10(@types/react@18.3.3)(postgres@3.4.4)(react@18.3.1)
