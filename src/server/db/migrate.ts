@@ -1,7 +1,8 @@
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import { db } from '~/server/db';
 
-// this will automatically run needed migrations on the database
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 migrate(db, { migrationsFolder: './src/db/migrations' })
   .then(() => {
     console.log('Migrations complete!');
