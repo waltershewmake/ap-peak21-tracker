@@ -14,11 +14,15 @@ If you are not familiar with the different technologies used in this project, pl
 
 ## Setup
 
-1. Clone the repository
-2. Run `pnpm install`
-3. Setup the db with `pnpm db:setup`
-4. Run `pnpm dev`
-5. Visit [http://localhost:3000](http://localhost:3000)
+1. `brew install corepack`
+
+- If you previously installed `pnpm` via a different method, you may need to uninstall it first.
+
+2. `corepack enable`
+3. Run `pnpm install`
+4. Setup the db with `pnpm db:setup`
+5. Run `pnpm dev`
+6. Visit [http://localhost:3000](http://localhost:3000)
 
 Run `pnpm db:push` to push the schema to the database during development.
 
