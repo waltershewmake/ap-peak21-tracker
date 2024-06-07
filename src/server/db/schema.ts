@@ -54,6 +54,7 @@ export const usersToHabits = createTable(
     habitId: serial('habit_id')
       .notNull()
       .references(() => habits.id),
+    completedOn: date('completed_on', { mode: 'string' }),
   },
   (t) => ({
     pk: primaryKey({

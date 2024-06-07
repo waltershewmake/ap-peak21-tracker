@@ -1,0 +1,152 @@
+{
+  "id": "5145a5f9-afac-4473-88fa-8090e07756b6",
+  "prevId": "b3068f0e-f6b6-40eb-90d5-d99b12df5763",
+  "version": "6",
+  "dialect": "postgresql",
+  "tables": {
+    "public.peak21_habit": {
+      "name": "peak21_habit",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "start_date": {
+          "name": "start_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "peak21_habit_name_unique": {
+          "name": "peak21_habit_name_unique",
+          "columns": [
+            "name"
+          ],
+          "nullsNotDistinct": false
+        }
+      }
+    },
+    "public.peak21_user": {
+      "name": "peak21_user",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "skool_id": {
+          "name": "skool_id",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "CURRENT_TIMESTAMP"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "peak21_user_skool_id_unique": {
+          "name": "peak21_user_skool_id_unique",
+          "columns": [
+            "skool_id"
+          ],
+          "nullsNotDistinct": false
+        }
+      }
+    },
+    "public.peak21_users_to_habits": {
+      "name": "peak21_users_to_habits",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "habit_id": {
+          "name": "habit_id",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "peak21_users_to_habits_user_id_peak21_user_id_fk": {
+          "name": "peak21_users_to_habits_user_id_peak21_user_id_fk",
+          "tableFrom": "peak21_users_to_habits",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "tableTo": "peak21_user",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "peak21_users_to_habits_habit_id_peak21_habit_id_fk": {
+          "name": "peak21_users_to_habits_habit_id_peak21_habit_id_fk",
+          "tableFrom": "peak21_users_to_habits",
+          "columnsFrom": [
+            "habit_id"
+          ],
+          "tableTo": "peak21_habit",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "peak21_users_to_habits_user_id_habit_id_pk": {
+          "name": "peak21_users_to_habits_user_id_habit_id_pk",
+          "columns": [
+            "user_id",
+            "habit_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
