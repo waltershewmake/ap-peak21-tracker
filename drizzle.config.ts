@@ -5,7 +5,7 @@ import { env } from '~/env';
 export default {
   schema: './src/server/db/schema.ts',
   migrations: {
-    table: 'ap-peak21-tracker_migrations',
+    table: 'peak21_migrations',
     schema: 'public',
   },
   out: './src/server/db/migrations',
@@ -13,5 +13,5 @@ export default {
   dbCredentials: {
     url: env.DATABASE_URL,
   },
-  tablesFilter: ['ap-peak21-tracker_*'],
+  tablesFilter: ['peak21_*'],
 } satisfies Config;

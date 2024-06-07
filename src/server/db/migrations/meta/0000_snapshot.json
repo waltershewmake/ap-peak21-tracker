@@ -4,8 +4,8 @@
   "version": "6",
   "dialect": "postgresql",
   "tables": {
-    "public.ap-peak21-tracker_post": {
-      "name": "ap-peak21-tracker_post",
+    "public.peak21_post": {
+      "name": "peak21_post",
       "schema": "",
       "columns": {
         "id": {
@@ -37,9 +37,7 @@
       "indexes": {
         "name_idx": {
           "name": "name_idx",
-          "columns": [
-            "name"
-          ],
+          "columns": ["name"],
           "isUnique": false
         }
       },

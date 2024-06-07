@@ -44,5 +44,8 @@
     "editor.gotoLocation.multipleImplementations": "goto",
     "editor.gotoLocation.multipleReferences": "goto",
     "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "[sql]": {
+      "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    },
   }
   
