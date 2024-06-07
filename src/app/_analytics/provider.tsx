@@ -27,11 +27,7 @@ function PostHogAuthWrapper({ children }: PropsWithChildren) {
 
   useEffect(() => {
     if (userInfo.user) {
-      posthog.identify(userInfo.user.id, {
-        name: userInfo.user.fullName,
-        email: userInfo.user.primaryEmailAddress?.emailAddress,
-        username: userInfo.user.username,
-      });
+      posthog.identify(userInfo.user.id);
     } else if (!auth.isSignedIn) {
       posthog.reset();
     }
